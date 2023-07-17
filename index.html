@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <label for="weather">Выберите тип погоды сегодня: </label>
+  <select id="weather">
+    <option value="">--Сделайте выбор--</option>
+    <option value="sunny">Солнечный</option>
+    <option value="rainy">Дождливо</option>
+    <option value="snowing">Снежно</option>
+    <option value="overcast">Облачно</option>
+  </select>
+
+  <p></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- Bu birinchi amailiyot edi, (Kodni uzim yozib kordim ishlamadi va shu uchun tayyorini kuchirdim) -->
+
+<!-- <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Allowance updater example</title>
+  </head>
+  <body>
+    <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check">
+
+    <p></p>
+
+    <script>
+      const checkBox = document.querySelector('input');
+      const para = document.querySelector('p');
+      let shoppingDone = false;
+
+      checkBox.addEventListener('change', () => {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        let childsAllowance;
+        if (shoppingDone === true) {
+          childsAllowance = 10;
+        } else {
+          childsAllowance = 5;
+        }
+
+        para.textContent = `Child has earned \$${childsAllowance} this week.`;
+      }
+
+      updateAllowance();
+    </script>
+  </body>
+</html> -->
