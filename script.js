@@ -1,26 +1,59 @@
 var select = document.querySelector('select');
-var para = document.querySelector('p')
+var para = document.querySelectorAll('p')
 
-select.onchange = setWeather; // ertaga suraladigan narsa Orzu akadan
+console.log(para);
+// para.forEach(e=>{
+//     console.log(e.textContent)
+// })
 
-// select.addEventListener('change', setWeather);
+// select.onchange = setWeather; // ertaga suraladigan narsa Orzu akadan
+
+select.addEventListener('change', setWeather);
 
 function setWeather() {
     var choice = select.value;
+    console.log('slect')
 
     if (choice === 'sunny') {
-        para.textContent = 'Сегодня хорошо и солнечно. Носите шорты! Идите на пляж, или в парк, и купите мороженное.';
+        para[0].textContent = 'Сегодня хорошо и солнечно. Носите шорты! Идите на пляж, или в парк, и купите мороженное.';
     } else if (choice === 'rainy') {
-        para.textContent = 'Дождь падает за окном; возьмите плащ и зонт, и не находитесь слишком долго на улице.';
+        para[0].textContent = 'Дождь падает за окном; возьмите плащ и зонт, и не находитесь слишком долго на улице.';
     } else if (choice === 'snowing') {
-        para.textContent = 'Снег падает - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.';
+        para[0].textContent = 'Снег падает - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.';
     } else if (choice === 'overcast') {
-        para.textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.';
+        para[0].textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.';
     } else {
         para.textContent = '';
     }   
 }
 
+
+// const infoDiv = document.querySelector('.information');
+// const select = document.querySelector('select');
+// const para = document.querySelector('p');
+
+let info = document.getElementById('info')
+console.log(info)
+
+const infoSelect = document.querySelector(".information #info");
+const selectElements = document.querySelectorAll(".information select");
+
+infoSelect.onchange = setInformation;
+function setInformation() {
+    console.log('selectga')
+    var choice = infoSelect.value;
+    console.log(choice)
+    if (choice === 'bozorov') {
+        console.log('hello')
+        para[1].textContent = 'Bozorov Sherali aka haqidagi malumotni tanlang';
+    } else if (choice === 'muxammedov') {
+        para[1].textContent = 'Снег падает - морозно! Лучше всего посидеть с чашкой горячего шоколада или слепить снеговика.';
+    } else if (choice === 'overcast') {
+        para[1].textContent = 'Дождя нет, но небо серое и мрачное; он все может измениться в любую минуту, поэтому на всякий случай возьмите дождевик.';
+    } else {
+        para[1].textContent = '';
+    }
+}
 
 
 
